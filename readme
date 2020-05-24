@@ -1,0 +1,76 @@
+{
+	"HyperDart Component": {
+		"prefix": "hycomp",
+		"body": [
+			"import 'package:react/react.dart';",
+			"",
+			"var $1 = registerComponent(() => _${1:label}());",
+			"",
+			"class _${1:label} extends Component2 {",
+			"  get initialState {",
+			"    return {};",
+			"  }",
+			"",
+			"  render() {",
+			"    return div({});",
+			"  }",
+			"}"
+		],
+		"description": "Insert a HyperComponent"
+	},
+	"Getter and Setter": {
+		"prefix": "getset",
+		"body": [
+			"$1 get $2 => attributes['${2:label}'];",
+			"set ${2:label}(${1:label} ${2:label}) => attributes['${2:label}'] = ${2:label};"
+		],
+		"description": "Getter and Setter"
+	},
+	"Material table": {
+		"prefix": "mattab",
+		"body": [
+			"_table() {",
+			"    return TableContainer(",
+			"      {},",
+			"      Table(",
+			"        {},",
+			"        _tableHead(),",
+			"        _tableBody(),",
+			"      ),",
+			"    );",
+			"  }",
+			"",
+			"  _tableHead() {",
+			"    return TableHead(",
+			"      {},",
+			"      TableRow(",
+			"        {},",
+			"        TableCell({}, \"Name\"),",
+			"      ),",
+			"    );",
+			"  }",
+			"",
+			"  _tableBody() {",
+			"    if (state['myList'].length == 0) return TableBody({});",
+			"",
+			"    List<MyModel> modelsList = state['myList'];",
+			"    return TableBody(",
+			"      {},",
+			"      jsify(",
+			"        [",
+			"          for (MyModel model in modelsList) {_tabelRow(model)}",
+			"        ],",
+			"      ),",
+			"    );",
+			"  }",
+			"",
+			"  _tabelRow(MyModel model) {",
+			"    return TableRow(",
+			"      {'key': model.uid},",
+			"      TableCell({}, model.name),",
+			"    );",
+			"  }",
+		],
+		"description": "Material table"
+	}
+}
